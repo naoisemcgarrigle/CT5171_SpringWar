@@ -26,5 +26,10 @@ pipeline {
                 sh "mvn package"
             }
         }
+        stage('Archive') {
+            steps {
+                artifacts: '**/demo*.war'
+            }
+        }
     }
 }
