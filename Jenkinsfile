@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        jdk 'jdk21'
+    }
     stages {
         stage('GetProject') {
             steps {
@@ -12,6 +14,8 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh "java -version"
+                sh "javac -version"
                 sh "mvn clean:clean"
                 sh "mvn dependency:copy-dependencies"
                 sh "mvn compiler:compile"
