@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Archive') {
             steps {
-                archiveArtifacts allowEmpytyArchive: true,
+                archiveArtifacts allowEmptyArchive: true,
                     artifacts: '**/demo*.war'
             }
         }
