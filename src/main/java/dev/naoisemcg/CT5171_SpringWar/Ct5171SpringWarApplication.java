@@ -11,7 +11,7 @@ public class Ct5171SpringWarApplication {
 
     @RequestMapping("/")
     public String hello1() {
-        return "Hello";
+        return "Hello... This was changed";
     }
 
     @RequestMapping("/hello")
